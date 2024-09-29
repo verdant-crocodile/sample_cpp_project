@@ -15,6 +15,7 @@ jobs:
           path: |
             build/main 
             build/tests 
+            build/benchmarks
 
   tests:
     needs: [build]
@@ -33,3 +34,12 @@ jobs:
         with:
           name: binaries
       - run: chmod +x main && ./main 5 7
+  
+  benchmark:
+    needs: build 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: binaries
+      - run: chmod +x benchmarks && ./benchmarks 

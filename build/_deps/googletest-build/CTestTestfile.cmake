@@ -1,0 +1,7 @@
+# CMake generated Testfile for 
+# Source directory: /home/veronika/projects/Vega/software engineering/sample_cpp_project/build/_deps/googletest-src
+# Build directory: /home/veronika/projects/Vega/software engineering/sample_cpp_project/build/_deps/googletest-build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("googlemock")

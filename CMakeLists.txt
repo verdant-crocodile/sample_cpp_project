@@ -5,6 +5,20 @@ include_directories(include)
 
 add_executable(main main.cpp src/my_add.cpp)
 
+
+include(FetchContent)
+FetchContent_Declare(
+    benchmark
+    GIT_REPOSITORY https://github.com/google/benchmark.git
+    GIT_TAG v1.6.0 
+)
+FetchContent_MakeAvailable(benchmark)
+
+add_executable(benchmarks src/benchmark.cpp src/my_add.cpp)
+target_link_libraries(benchmarks benchmark::benchmark)
+
+
+
 include(FetchContent)
 FetchContent_Declare(
    googletest
