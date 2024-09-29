@@ -35,7 +35,7 @@ jobs:
           name: binaries
       - run: chmod +x main && ./main 5 7
   
-  benchmarks:
+  benchmark:
     needs: build 
     runs-on: ubuntu-latest
     steps:
