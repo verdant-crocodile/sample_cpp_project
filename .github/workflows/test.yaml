@@ -23,7 +23,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: binaries
-      - run: chmod +x build/tests && ./build/tests
+      - run: chmod +x tests && ./tests
 
   run:
     needs: build
@@ -32,4 +32,4 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: binaries
-      - run: chmod +x build/main && ./build/main 5 7
+      - run: chmod +x main && ./main 5 7
