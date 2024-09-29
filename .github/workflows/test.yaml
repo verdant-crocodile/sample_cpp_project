@@ -3,7 +3,7 @@ on: [push]
 jobs:
    build and run:
       runs-on: ubuntu-latest
-      stages: 
-         - uses: actions/checkout 
+      steps: 
+         - uses: actions/checkout@v4
          - run: g++ main.cpp my_add.cpp -0 main
          - test: ./main 5 7
