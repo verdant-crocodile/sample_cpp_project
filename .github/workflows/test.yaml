@@ -1,4 +1,4 @@
-name: build and run
+name: basic
 on: [push]
 jobs:
    build and run:
