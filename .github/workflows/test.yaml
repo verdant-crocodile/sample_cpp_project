@@ -6,4 +6,4 @@ jobs:
       steps: 
          - uses: actions/checkout@v4
          - run: g++ main.cpp my_add.cpp -0 main
-         - test: ./main 5 7
+         - run: ./main 5 7
